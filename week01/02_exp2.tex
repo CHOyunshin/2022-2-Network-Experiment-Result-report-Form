@@ -113,17 +113,19 @@
         \begin{enumerate}[label=\bfseries Problem \arabic*:,leftmargin=*,labelindent=1em]
         \addtocounter{enumi}{11}
             \item How many HTTP GET request messages did your browser send? \\[0.2mm]
-            \soln
+            \soln 1, packet 42
             
             \item Which packet number in the trace contains the status code and phrase associated with the response to the HTTP GET request?\\[0.2mm]
-            \soln
+            \soln packet 64 
             
             \item What is the status code and phrase in the response?\\[0.2mm]
-            \soln
+            \soln 200 (OK)
             
             \item How many data-containing TCP segments were needed to carry
             the single HTTP response and the text of the Bill of Rights? \\[0.2mm]
-            \soln
+            \soln The Packets that of destination adr is "172.20.10.10" in the 
+            captured list are packet 63, 64, 65, 66. So the number of 
+            data - containing TCP segments are 4.
             
         \end{enumerate}
 \newpage
