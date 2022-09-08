@@ -26,13 +26,30 @@
 \usepackage[shortlabels]{enumitem}
 \usepackage{indentfirst}
 \usepackage{hyperref}
-    
+
+\usepackage{enumitem}
+\newlist{enumerateoptional}{enumerate}{1}
+\setlist[enumerateoptional]{
+    before=\let\item\optionalItem,
+    label=\arabic*,
+    nosep,
+    labelindent=20mm,
+    leftmargin=*
+}
+\let\realItem\item
+
+\newcommand\optionalItem[1][]{%
+  \refstepcounter{enumerateoptionali}% increment the counter
+  \realItem[\bfseries#1~\theenumerateoptionali)]%
+}
+% caption 업데이트 
+% \usepackage{subcaption}
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 
 % 여기서 변경하는 제목들을 설정해 준다. 
 %%
 %----------------- 예비레포트 주차 
-\newcommand{\numnum}{2}
+\newcommand{\numnum}{1}
 %-----------------단원명
 % \newcommand{\SUBJECTT}{}
 %-----------------문제번호들
@@ -46,6 +63,9 @@
 % \newcommand{\problemnumh}{8}
 % \newcommand{\problemnumi}{9}
 
+% Enumerate Listing modified 
+\renewcommand{\labelenumi}{Problem  \theenumi}
+\newcommand{\soln}[1][Answer]{\noindent\textbf{#1}\quad}
 
 \newenvironment{problem}[2][Problem]  
     { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
@@ -54,8 +74,8 @@
 \begin{document}
 \pagestyle{fancy}
 \fancyhf{}
-    \rhead{2조 2016142096 \textbf{조윤신}, 2017142043 \textbf{김재민}}
-    \lhead{Pre Report \numnum}
+    \rhead{\small \textbf{2조} \quad 2016142096 \textbf{조윤신} \quad 2017142043 \textbf{김재민}}
+    \lhead{Result Report Week \numnum}
 \cfoot{\thepage}
 \renewcommand\headrulewidth{0.3mm}
 %\renewcommand\footrulewidth{0.3mm}
@@ -64,7 +84,7 @@
 \begin{flushleft}
 \textsc{School of Electrical and Electronic of Enginnering} \\
 \textsc{eee 4474-01 : Experiments on Communication Networks }\\[0.1cm]
-\small{\textsc{2조 2016142096 \textbf{조윤신}, 2017142043 \textbf{김재민}}}\\
+\small{\textsc{\textbf{2조} \quad 2016142096 \textbf{조윤신} \quad 2017142043 \textbf{김재민}}}\\
 
 \end{flushleft}
 \begin{flushright}\vspace{-25mm}
@@ -72,9 +92,9 @@
     \vspace{5mm}
 \end{flushright}
     \begin{center}\vspace{-1.5cm}
-        \textbf{\huge  Pre Report Week\numnum}\\ 
+        \textbf{\huge  Result Report Week \numnum}\\ 
         \vspace{0.6mm}
-        {\large TCP, UDP protocols}\\           
+        {\large Introduction to Wireshark}\\           
     \end{center}
     
 \vspace{-5mm}
@@ -83,11 +103,11 @@
 % main documents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./week02}{01_tcp}
-\newpage
-\import{./week02}{02_udp}
-\newpage
-\import{./week02}{03_ip}
+\import{./week01}{01_exp1}
+
+\import{./week01}{02_exp2}
+
+\import{./week01}{03_exp3}
 \end{document}
 
 
