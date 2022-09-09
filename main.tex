@@ -1,5 +1,5 @@
 %페이지 세팅
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
 \setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
 \textwidth 6.5in
@@ -45,13 +45,15 @@
 % caption 업데이트 
 % \usepackage{subcaption}
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+% 전체 줄간격 추가 ==> 영어는 필요없을거 같다.
+% \linespread{1.1}
 
 % 여기서 변경하는 제목들을 설정해 준다. 
 %%
 %----------------- 예비레포트 주차 
 \newcommand{\numnum}{1}
 %-----------------단원명
-% \newcommand{\SUBJECTT}{}
+\newcommand{\subtitle}{wireshark(1) : Getting Started HTTP DNS}
 %-----------------문제번호들
 % \newcommand{\problemnuma}{1}
 % \newcommand{\problemnumb}{2}
@@ -62,31 +64,34 @@
 % \newcommand{\problemnumg}{7}
 % \newcommand{\problemnumh}{8}
 % \newcommand{\problemnumi}{9}
-
-% Enumerate Listing modified 
-\renewcommand{\labelenumi}{Problem  \theenumi}
-\newcommand{\soln}[1][Answer]{\noindent\textbf{#1}  }
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--> 떠다니는 객체 사용하는 부분 
+\usepackage{wrapfig}
 \newenvironment{problem}[2][Problem]  
     { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
     {  \end{mdframed}}
-
+% Enumerate Listing modified 
+\renewcommand{\labelenumi}{Problem  \theenumi}
+\newcommand{\soln}[1][Answer]{\noindent\textbf{#1}  }
+% \newenvironment{problem}[2][Problem]  
+%     { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+%     {  \end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \pagestyle{fancy}
 \fancyhf{}
-    \rhead{\small \textbf{2조} \quad 2016142096 \textbf{조윤신} \quad 2017142043 \textbf{김재민}}
-    \lhead{Result Report Week \numnum}
+    \rhead{\small 2조 2016142096 조윤신, 2017142043 김재민}
+    \lhead{Result Report Week\numnum \subtitle}
 \cfoot{\thepage}
 \renewcommand\headrulewidth{0.3mm}
 %\renewcommand\footrulewidth{0.3mm}
 \thispagestyle{plain}
-
 \begin{flushleft}
 \textsc{School of Electrical and Electronic of Enginnering} \\
 \textsc{eee 4474-01 : Experiments on Communication Networks }\\[0.1cm]
-\small{\textsc{\textbf{2조} \quad 2016142096 \textbf{조윤신} \quad 2017142043 \textbf{김재민}}}\\
-
+\small{\textsc{\textbf{2조} 2016142096 \textbf{조윤신}, 2017142043 \textbf{김재민}}}\\
 \end{flushleft}
+
 \begin{flushright}\vspace{-25mm}
     \includegraphics[height=3cm]{image/1.jpg}
     \vspace{5mm}
@@ -94,36 +99,23 @@
     \begin{center}\vspace{-1.5cm}
         \textbf{\huge  Result Report Week \numnum}\\ 
         \vspace{0.6mm}
-        {\large Introduction to Wireshark}\\           
+        {\large \subtitle}\\           
     \end{center}
-    
 \vspace{-5mm}
 \rule{\linewidth}{0.4mm}
 \vspace{-5mm}
 % main documents
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \import{./week01}{01_exp1}
-
 \import{./week01}{02_exp2}
-
-\import{./week01}{03_exp3}
+% \import{./week01}{03_exp3}
 \end{document}
-
-
-% 사진을 첨부하는 포멧 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    Bla Bla 1\\*
-%
-         \vspace{-4mm}
-        	\begin{figure}[!h]
-        		\centering
-        			\includegraphics[width=.4\textwidth]{image/2-2.png}
-        			\caption{Experiment 1 - top.v}
-        	\end{figure}
-        \vspace{-4mm}  
-%
-
-\vspace{-3mm}
-    Bla Bla 2 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 일반적인 이미지를 사용하는 부분
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+bla. \\
+    \vspace{-4mm}  
+        \begin{figure}[!h]\centering
+    		\includegraphics[width=.9\textwidth]{image/week01/2-1.png}
+    		\caption{\small UDP Header}
+    		\vspace{-10pt}
+        \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
