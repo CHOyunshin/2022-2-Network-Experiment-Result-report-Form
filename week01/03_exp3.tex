@@ -61,7 +61,7 @@
              \vspace{-2mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-5.png}
-        		\caption{\footnotesize Problem 3-5's screenshot : DNS response message, answers}
+        		\caption{\footnotesize Problem 3-5's screenshot : DNS query response message, answers}
         		\vspace{-10pt}
             \end{figure}
             % \vspace{-4mm}
@@ -72,7 +72,7 @@
             \vspace{-2mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-6.png}
-        		\caption{\footnotesize Problem 3-6's screenshot : IP address provided in DNS response message}
+        		\caption{\footnotesize Problem 3-6's screenshot : IP address provided in DNS query response message}
         		\vspace{-10pt}
             \end{figure}
             % \vspace{-4mm}
@@ -80,20 +80,22 @@
         does your host issue new DNS queries?\\[0.2mm]
             \soln There is no any issued DNS queries.
     \end{enumerate}
-\clearpage
 % Experiment 3-2
 \subsection{DNS : Traing DNS with Wireshark \#2}
+    \subsubsection*{Experiment Results}
+        \vspace{-2mm}  
+        \begin{figure}[!h]\centering
+    		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-8-0.png}
+    		\caption{\footnotesize Experiment 3 - b screenshot : 'nslookup' on 'www.mit.edu'}
+    		\vspace{-10pt}
+        \end{figure}
+\clearpage
     \subsubsection*{Problems}
     \begin{enumerate}[label=\bfseries Problem \arabic*:,leftmargin=*,labelindent=1em]\addtocounter{enumi}{7}
         \item What is the destination port for the DNS query message? 
         What is the source port of DNS response message?\\[0.2mm]
             \soln Both the destination port of the DNS query message and the source port of the DNS response message are port 53.
-            \vspace{-2mm}  
-            \begin{figure}[!h]\centering
-        		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-8-0.png}
-        		\caption{\footnotesize Problem 3-8-0's screenshot : 'nslookup' on 'www.mit.edu'}
-        		\vspace{-10pt}
-            \end{figure}
+
             % \vspace{-4mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.79\textwidth]{image/result_week01/Q3-8-1.png}
@@ -108,7 +110,8 @@
             \end{figure}
         \item To what IP address is the DNS query message sent? 
         Is this the IP address of your default local DNS server?\\[0.2mm]
-            \soln The DNS query message sent to IP addr ‘172.20.10.1’, which is the same of my local DNS server could be figured out as issued ‘ipconfig /all’ in powershell.
+            \soln The DNS query message sent to IP addr ‘172.20.10.1’, 
+            which is the same of my local DNS server could be figured out as issued ‘ipconfig /all’ in powershell.
             \vspace{-2mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-9-1.png}
@@ -121,41 +124,45 @@
         		\caption{\footnotesize Problem 3-9-2's screenshot : ‘ipconfig /all’ command in powershell}
         		\vspace{-10pt}
             \end{figure}
+\clearpage
         \item Examine the DNS query message. What “Type” of DNS query is it? 
         Does the query message contain any “answers”?\\[0.2mm]
             \soln Type A / The query message doesn’t contain any answers.
             \vspace{-2mm}  
             \begin{figure}[!h]\centering
-        		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-a.png}
+        		\includegraphics[width=.73\textwidth]{image/result_week01/Q3-a.png}
         		\caption{\footnotesize Problem 3-10's screenshot : DNS query message}
         		\vspace{-10pt}
             \end{figure}
             % \vspace{-4mm}
+% \clearpage
         \item Examine the DNS response message. 
         How many “answers” are provided? What do each of these answers contain?\\[0.2mm]
             \soln There are three answers which contains information about Name, Type, Class, Time to live, Data length, CNAME.
             \vspace{-2mm}  
             \begin{figure}[!h]\centering
-        		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-b.png}
+        		\includegraphics[width=.73\textwidth]{image/result_week01/Q3-b.png}
         		\caption{\footnotesize Problem 3-11's screenshot : DNS response message}
         		\vspace{-10pt}
             \end{figure}
             % \vspace{-4mm}
     \end{enumerate}
-\clearpage
 % Experiment 3-3
 \subsection{DNS : Traing DNS with Wireshark \#3}
-    \subsubsection*{Questions}
+    \subsubsection*{Experiment Results}
+        \vspace{-2mm}  
+        \begin{figure}[!h]\centering
+    		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-c-0.png}
+    		\caption{\footnotesize Experiment 3 - C screenshot : 'nslookup -type=NS mit.edu' command in powershell}
+    		\vspace{-10pt}
+        \end{figure}
+\clearpage
+    \subsubsection*{Problems}
     \begin{enumerate}[label=\bfseries Problem \arabic*:,leftmargin=*,labelindent=1em]\addtocounter{enumi}{11}
         \item To what IP address is the DNS query message sent? 
         Is this the IP address of your default local DNS server?\\[0.2mm]
-            \soln The DNS query message sent to IP addr ‘172.20.10.1’, which is the same of my local DNS server could be figured out as issued ‘ipconfig /all’ in powershell.
-            \vspace{-2mm}  
-            \begin{figure}[!h]\centering
-        		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-c-0.png}
-        		\caption{\footnotesize Problem 3-12-0's screenshot : 'nslookup' command in powershell}
-        		\vspace{-10pt}
-            \end{figure}
+            \soln The DNS query message sent to IP addr ‘172.20.10.1’,
+            which is the same of my local DNS server could be figured out as issued ‘ipconfig /all’ in powershell.
             % \vspace{-4mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.79\textwidth]{image/result_week01/Q3-c-1.png}
@@ -170,7 +177,7 @@
             \end{figure}
         \item Examine the DNS query message. What “Type” of DNS query is it? 
         Does the query message contain any “answers”?\\[0.2mm]
-            \soln Type NS (name server) / The query message doesn’t contain any answers.
+            \soln Type NS\footnote{Name Server} / The query message doesn’t contain any answers.
             \vspace{-2mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-d.png}
@@ -185,30 +192,33 @@
             \vspace{-2mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-e-1.png}
-        		\caption{\footnotesize Problem 3-14-1's screenshot : DNS response message}
+        		\caption{\footnotesize Problem 3-14-1's screenshot : DNS query response message}
         		\vspace{-10pt}
             \end{figure}
             % \vspace{-4mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.79\textwidth]{image/result_week01/Q3-e-2.png}
-        		\caption{\footnotesize Problem 3-14-2's screenshot : 'nslookup' command in powershell}
+        		\caption{\footnotesize Problem 3-14-2's screenshot : 'nslookup -type=NS mit.edu' command in powershell}
         		\vspace{-10pt}
             \end{figure}
     \end{enumerate}
 % Experiment 3-4
 \subsection{DNS : Traing DNS with Wireshark \#4}
-    \subsubsection*{Questions}
+    \subsubsection*{Experiment Results}
+         \vspace{-2mm}  
+        \begin{figure}[!h]\centering
+    		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-f-0.png}
+    		\caption{\footnotesize Experiment 3 - d screenshot : 'nslookup www.aiit.co.kr bitsy.mit.edu' command in powershell}
+    		\vspace{-10pt}
+        \end{figure}
+    \subsubsection*{Problems}
     \begin{enumerate}[label=\bfseries Problem \arabic*:,leftmargin=*,labelindent=1em]\addtocounter{enumi}{14}
         \item To what IP address is the DNS query message sent? 
         Is this the IP address of your default local DNS server? 
         If not, what does the IP address correspond to?\\[0.2mm]
-            \soln No. DNS query message sent to ‘18.0.72.3’ which is the bitsy.mit.edu’s IP address. And we can figure out this in query response message’s answer from bitsy.mit.edu.
-             \vspace{-2mm}  
-            \begin{figure}[!h]\centering
-        		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-f-0.png}
-        		\caption{\footnotesize Problem 3-15-0's screenshot : 'nslookup' command in powershell}
-        		\vspace{-10pt}
-            \end{figure}
+            \soln No. DNS query message sent to ‘18.0.72.3’ which is the bitsy.mit.edu’s IP address. 
+            And we can figure out this in query response message’s answer from bitsy.mit.edu.
+
             % \vspace{-4mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.79\textwidth]{image/result_week01/Q3-f-1.png}
@@ -218,7 +228,7 @@
             % \vspace{-4mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.79\textwidth]{image/result_week01/Q3-f-2.png}
-        		\caption{\footnotesize Problem 3-15-2's screenshot : DNS response message, answers}
+        		\caption{\footnotesize Problem 3-15-2's screenshot : DNS query response message, answers}
         		\vspace{-10pt}
             \end{figure}
         \item Examine the DNS query message. 
@@ -233,8 +243,9 @@
             % \vspace{-4mm}
         \item Examine the DNS response message. How many “answers” are provided?
         What does each of these answers contain?\\[0.2mm]
-            \soln As we can see in the figure below, the response from 18.0.72.3 was not received in the DNS request in this experiment.Therefore, the answer for question 17 is to use the ‘dns-etheral-trace-4’ file.\\
-            One answer was provided. And the answer contained NAME, TYPE, CLASS, TIME TO LIVE, DATA LENGTH and ADDRESS.c`
+            \soln As we can see in the figure below, the response from 18.0.72.3 was not received in the DNS request in this experiment.Therefore,
+            the answer for question 17 is to use the ‘dns-etheral-trace-4’ file.\\
+            One answer was provided. And the answer contained NAME, TYPE, CLASS, TIME TO LIVE, DATA LENGTH and ADDRESS.`
             \vspace{-2mm}  
             \begin{figure}[!h]\centering
         		\includegraphics[width=.78\textwidth]{image/result_week01/Q3-h-1.png}
