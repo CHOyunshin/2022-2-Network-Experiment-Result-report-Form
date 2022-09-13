@@ -47,9 +47,10 @@
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차
-\newcommand{\numnum}{1}
+\newcommand{\numnum}{2}
 % 실험 부제목
-\newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
+% \newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
+\newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -97,18 +98,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 01 ~ 09.14
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week01}{01_exp1}
-\import{./TEX/week01}{02_exp2}
-\import{./TEX/week01}{03_exp3}
+% \import{./TEX/week01}{01_exp1}
+% \import{./TEX/week01}{02_exp2}
+% \import{./TEX/week01}{03_exp3}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 02 ~ 09.21
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \import{./week02}{01_tcp}
-% \newpage
-% \import{./week02}{02_udp}
-% \newpage
-% \import{./week02}{03_ip}
+\import{./TEX/week02}{01_01_tcp}
+\import{./TEX/week02}{01_02_tcp_basic}
+\import{./TEX/week02}{01_03_tcp_congestion}
+\import{./TEX/week02}{02_udp}
+\import{./TEX/week02}{03_01_ip}
+\import{./TEX/week02}{03_02_basic_ipv4}
+\import{./TEX/week02}{03_03_fragmentation}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 03 ~ 09.28

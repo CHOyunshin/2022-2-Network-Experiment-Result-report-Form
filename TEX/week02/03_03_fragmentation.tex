@@ -1,13 +1,20 @@
-\subsection{ }
+\subsection{Fragmentation}
     \subsubsection*{Problems}
     \begin{enumerate}[label=\bfseries Problem \arabic*:,leftmargin=*,labelindent=1em]
     %addto counter에 앞서 subsection의 문제 개수만큼 적으면 자동으로 counting
     %image 번호만 신경써주면 된다.
-    \addtocounter{enumi}{3}
+    \addtocounter{enumi}{8}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 3-9
+        \item Find the first IP datagram containing the first part of the segment sent to 128.119.245.12 sent by your computer via the traceroute command to gaia.cs.umass.edu, after you specified that the traceroute packet length should be 3000. Has that segment been fragmented across more than one IP datagram?\\[0.2mm]
+        \soln
+    %     \vspace{-4mm}  
+    %     \begin{figure}[!h]\centering
+    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
+    % 		\caption{\footnotesize Problem 3-9's screenshot : }
+    % 		\vspace{-10pt}
+    %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 3-10
-        \item Find the first ICMP Echo Request message that was sent by your computer 
-        after you changed the Packet Size in pingplotter to be 2000. 
-        Has that message been fragmented across more than one IP datagram? \\[0.2mm]
+        \item What information in the IP header indicates that this datagram been fragmented? \\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -16,10 +23,7 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 3-11
-        \item Print out the first fragment of the fragmented IP datagram. 
-        What information in the IP header indicates that the datagram been fragmented? 
-        What information in the IP header indicates whether this is the first fragment versus a latter fragment? 
-        How long is this IP datagram?\\[0.2mm]
+        \item What information in the IP header for this packet indicates whether this is the first fragment versus a latter fragment?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -28,9 +32,7 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 3-12
-        \item Print out the second fragment of the fragmented IP datagram. 
-        What information in the IP header indicates that this is not the first datagram fragment? 
-        Are the more fragments? How can you tell?\\[0.2mm]
+        \item How many bytes are there in is this IP datagram (header plus payload)?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -40,7 +42,7 @@
     %     \end{figure}
 % \newpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 3-13
-        \item What fields change in the IP header between the first and second fragment?\\[0.2mm]
+        \item Now inspect the datagram containing the second fragment of the fragmented UDP segment. What information in the IP header indicates that this is not the first datagram fragment?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -49,21 +51,12 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 3-14
-        \item How many fragments were created from the original datagram?\\[0.2mm]
+        \item What fields change in the IP header between the first and second fragment?\\[0.2mm]
         \soln
         % \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     % 		\includegraphics[width=.85\textwidth]{image/week02/ }
     % 		\caption{\footnotesize Problem 3-14's screenshot : }
-    % 		\vspace{-10pt}
-    %     \end{figure}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 3-15
-        \item What fields change in the IP header among the fragments?\\[0.2mm]
-        \soln
-        % \vspace{-4mm}  
-    %     \begin{figure}[!h]\centering
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
-    % 		\caption{\footnotesize Problem 3-15's screenshot : }
     % 		\vspace{-10pt}
     %     \end{figure}
     \end{enumerate}

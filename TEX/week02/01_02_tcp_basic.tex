@@ -1,11 +1,20 @@
-\subsection{ }
+\subsection{TCP Basics}
     \subsubsection*{Problems}
     \begin{enumerate}[label=\bfseries Problem \arabic*:,leftmargin=*,labelindent=1em]
     %addto counter에 앞서 subsection의 문제 개수만큼 적으면 자동으로 counting
     %image 번호만 신경써주면 된다.
-    \addtocounter{enumi}{3}
+    \addtocounter{enumi}{2}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-3
+        \item What is the sequence number of the TCP SYN segment that is used to initiate the TCP connection between the client computer and gaia.cs.umass.edu? What is it in the segment that identifies the segment as a SYN segment?\\[0.2mm]
+        \soln
+    %     \vspace{-4mm}  
+    %     \begin{figure}[!h]\centering
+    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
+    % 		\caption{\footnotesize Problem 1-3's screenshot : }
+    % 		\vspace{-10pt}
+    %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-4
-        \item \\[0.2mm]
+        \item What is the sequence number of the SYNACK segment sent by gaia.cs.umass.edu to the client computer in reply to the SYN? What is the value of the Acknowledgement field in the SYNACK segment? How did gaia.cs.umass.edu determine that value? What is it in the segment that identifies the segment as a SYNACK segment?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -14,7 +23,7 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-5
-        \item \\[0.2mm]
+        \item What is the sequence number of the TCP segment containing the HTTP POST command? Note that in order to find the POST command, you’ll need to dig into the packet content field at the bottom of the Wireshark window, looking for a segment with a “POST” within its DATA field.\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -23,7 +32,12 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-6
-        \item \\[0.2mm]
+        \item Consider the TCP segment containing the HTTP POST as the first segment in the TCP connection. What are the sequence numbers of the first six segments in the TCP connection (including the segment containing the HTTP POST)? At what time was each segment sent? When was the ACK for each segment received? Given the difference between when each TCP segment was sent, and when its acknowledgement was received, what is the RTT value for each of the six segments? \\
+        What is the EstimatedRTT value after the receipt of each ACK?\\
+        Assume that the value of the EstimatedRTT is equal to the measured RTT for the first segment, and then is computed using the EstimatedRTT equation below for all subsequent segments.\\
+        \begin{equation*}
+            \text{Estimated RTT} = 0.875 \times \text{Estimated RTT} + 0.125 \times \text{Sample RTT}
+        \end{equation*}
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -33,7 +47,7 @@
     %     \end{figure}
 % \newpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-7
-        \item \\[0.2mm]
+        \item What is the length of each of the first six TCP segments?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -42,7 +56,7 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-8
-        \item \\[0.2mm]
+        \item What is the minimum amount of available buffer space advertised at the received for the entire trace? Does the lack of receiver buffer space ever throttle the sender?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -51,7 +65,7 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-9
-        \item \\[0.2mm]
+        \item Are there any retransmitted segments in the trace file? What did you check for (in the trace) in order to answer this question?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -60,7 +74,7 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-10
-        \item \\[0.2mm]
+        \item How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment.\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
@@ -70,21 +84,12 @@
     %     \end{figure}
 % \newpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-11
-        \item \\[0.2mm]
+        \item What is the throughput for the TCP connection? Explain how you calculated this value.\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     % 		\includegraphics[width=.85\textwidth]{image/week02/ }
     % 		\caption{\footnotesize Problem 1-11's screenshot : }
-    % 		\vspace{-10pt}
-    %     \end{figure}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-12
-        \item \\[0.2mm]
-        \soln
-    %     \vspace{-4mm}  
-    %     \begin{figure}[!h]\centering
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
-    % 		\caption{\footnotesize Problem 1-12's screenshot : }
     % 		\vspace{-10pt}
     %     \end{figure}
     \end{enumerate}
