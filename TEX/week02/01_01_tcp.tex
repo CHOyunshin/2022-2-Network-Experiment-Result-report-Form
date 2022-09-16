@@ -1,25 +1,28 @@
 \section{Experiment 1 : TCP}
 \subsection{A first look at the captured trace}
+    We used wireshark's given captured packet file 'TCP-ethreal-trace-1' for experiment 1 answering problem 1 to 12.
     \subsubsection*{Problems}
     \begin{enumerate}[label=\bfseries Problem \arabic*:,leftmargin=*,labelindent=1em]
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-1
         \item What is the IP address and TCP port number used by the client computer (source) that is transferring the file to gaia.cs.umass.edu?
         To answer this question, it’s probably easiest to select an HTTP message and explore the details of the TCP packet used to carry this HTTP message, using the “details of the selected packet header window”\\[0.2mm]
-        \soln Source IP address : 172. 24.81.26  /  Souce port : 52698
-        \vspace{-4mm}  
+        \soln Source IP address : 192. 168.1.102  /  Souce port : 1161
+        % \vspace{-4mm}  
         \begin{figure}[!h]\centering
+        \hspace{15mm}
     		\includegraphics[width=.85\textwidth]{image/week02/1-1-1.png}
-    		\caption{\footnotesize Problem 1-1's screenshot : }
+    		\caption{\footnotesize Problem 1-1's screenshot : Packet - POST / reply (text/plain)}
     		\vspace{-10pt}
         \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-2
         \item What is the IP address of gaia.cs.umass.edu? On what port number is it sending and receiving TCP segments for this connection?\\[0.2mm]
-        \soln
-    %     \vspace{-4mm}  
-    %     \begin{figure}[!h]\centering
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
-    % 		\caption{\footnotesize Problem 1-2's screenshot : }
-    % 		\vspace{-10pt}
-    %     \end{figure}
+        \soln Source IP address : 128. 119.245.12  /  Souce port : 80
+        % \vspace{-4mm}  
+        \begin{figure}[!h]\centering
+        \hspace{15mm}
+    		\includegraphics[width=.85\textwidth]{image/week02/1-2-1.png}
+    		\caption{\footnotesize Problem 1-2's screenshot : Packet - [SYN] Seq = 0}
+    		\vspace{-10pt}
+        \end{figure}
     \end{enumerate}
 \newpage

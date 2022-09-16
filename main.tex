@@ -37,7 +37,8 @@
     leftmargin=*
 }
 \let\realItem\item
-
+% Setting Table Color
+% \usepackage[table,xcdraw]{xcolor}
 \newcommand\optionalItem[1][]{%
   \refstepcounter{enumerateoptionali}% increment the counter
   \realItem[\bfseries#1~\theenumerateoptionali)]%
