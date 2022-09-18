@@ -73,16 +73,16 @@
         \vspace{-4mm}  
         \begin{figure}[!h]\raggedleft
         \hspace{15mm}
-    		\includegraphics[width=.9\textwidth]{image/week02/1-6-3.png}
-    		\caption{\footnotesize Problem 1-6-2's screenshot : The result of EstimatedRTT by jupyter notebook}
+    		\includegraphics[width=.95\textwidth]{image/week02/1-6-3.png}
+    		\caption{\footnotesize Problem 1-6-2's screenshot : The calculation result of EstimatedRTT by jupyter notebook}
     		\vspace{-10pt}
         \end{figure}
         
-        The RTT plot for packet in \\
+        We plot the RTT for each of the TCP segments that were being sent from the client to the gaia.cs.umass.edu.server.\\
         \vspace{-4mm}  
         \begin{figure}[!h]\raggedleft
         \hspace{15mm}
-    		\includegraphics[width=.9\textwidth]{image/week02/1-6-2.png}
+    		\includegraphics[width=.95\textwidth]{image/week02/1-6-2.png}
     		\caption{\footnotesize Problem 1-6-3's screenshot : RTT plot}
     		\vspace{-10pt}
         \end{figure}
@@ -99,21 +99,24 @@
         \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-8
         \item What is the minimum amount of available buffer space advertised at the received for the entire trace? Does the lack of receiver buffer space ever throttle the sender?\\[0.2mm]
-        \soln
-    %     \vspace{-4mm}
-    %     \begin{figure}[!h]\centering
-    %     \hspace{15mm}  
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
-    % 		\caption{\footnotesize Problem 1-8's screenshot : }
-    % 		\vspace{-10pt}
-    %     \end{figure}
+        \soln The minimum amount of available buffer space advertised at the received for the entire trace be marked by the first ACK sent from the server. And the value is the window size value of the ACK. The first ACK, No.6 packet, of value is 6780.\\
+        \vspace{-4mm}
+        \begin{figure}[!h]\centering
+        \hspace{15mm}  
+    		\includegraphics[width=.85\textwidth]{image/week02/1-8-1.png}
+    		\caption{\footnotesize Problem 1-8's screenshot : Packet List - Marked the first six ACK, No.6, 9, 12, 14, 15, 16 with ACK No.6’s message}
+    		\vspace{-10pt}
+        \end{figure}
+        
+        \vspace{-4mm}
+        Since we can find out that the first six ACK’s window size grows up to 20440 at ACK No.16 , and that means the maximum had not been reached in given trace. There was no throrrled because of the lack of receiver buffer space.
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-9
         \item Are there any retransmitted segments in the trace file? What did you check for (in the trace) in order to answer this question?\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     %     \hspace{15mm}  
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
+    % 		\includegraphics[width=.85\textwidth]{image/week02/1-9-1.png}
     % 		\caption{\footnotesize Problem 1-9's screenshot : }
     % 		\vspace{-10pt}
     %     \end{figure}
@@ -121,9 +124,9 @@
         \item How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment.\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
-    %     \hspace{15mm}  
     %     \begin{figure}[!h]\centering
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
+    %     \hspace{15mm}  
+    % 		\includegraphics[width=.85\textwidth]{image/week02/1-a-1.png}
     % 		\caption{\footnotesize Problem 1-10's screenshot : }
     % 		\vspace{-10pt}
     %     \end{figure}
@@ -132,9 +135,9 @@
         \item What is the throughput for the TCP connection? Explain how you calculated this value.\\[0.2mm]
         \soln
     %     \vspace{-4mm}  
-    %     \hspace{15mm}  
     %     \begin{figure}[!h]\centering
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
+    %     \hspace{15mm}  
+    % 		\includegraphics[width=.85\textwidth]{image/week02/1-b-1.png}
     % 		\caption{\footnotesize Problem 1-11's screenshot : }
     % 		\vspace{-10pt}
     %     \end{figure}

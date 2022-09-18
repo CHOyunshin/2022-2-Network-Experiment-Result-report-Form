@@ -36,6 +36,24 @@
     labelindent=20mm,
     leftmargin=*
 }
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sectioning Sytle Change
+\renewcommand{\thesubsection}{\thesection-\arabic{subsection}}
+% \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+% Customize Section Style
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{Experiment \thesection\ : }
+\newcommand\prefix@subsection{Topic \thesubsection\ :\ }
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \let\realItem\item
 % Setting Table Color
 % \usepackage[table,xcdraw]{xcolor}
@@ -43,7 +61,6 @@
   \refstepcounter{enumerateoptionali}% increment the counter
   \realItem[\bfseries#1~\theenumerateoptionali)]%
 }
-\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
