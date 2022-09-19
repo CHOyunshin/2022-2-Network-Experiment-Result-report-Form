@@ -124,7 +124,7 @@
 \clearpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-10
         \item How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment.\\[0.2mm]
-        \soln As we know that the ACK number is that the client puts is  the sequence number of the next byte the client expecting from the receiver. That it is 
+        \soln As we know that the ACK number is that the client puts is  the sequence number of the next byte the client expecting from the receiver. That it is the difference between the continous ACK is the amount of the data.
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     %     \hspace{15mm}  
@@ -156,7 +156,14 @@
 % \newpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-11
         \item What is the throughput for the TCP connection? Explain how you calculated this value.\\[0.2mm]
-        \soln
+        \soln The $\text{Troughput}$ can be calculated by the equation below:
+        \begin{equation*}
+            \text{Throughput} = \frac{\text{Amount of data transmitted}}{\text{Time incurred}}
+        \end{equation*}
+        The amount of the HTTP data ckient sent, the last ACK's packet 202's ACK number,164091, the value of the opposite expectating data sequence number. \footnote{Amount of the data transmitted in problem}.The incurred can be calculated by the time difference between the first deassembled ACK, Packet No. 4, and the last ACK, Packet No.202, $\text{Time of packet No.202} - \text{Time of packet No.4} = 5.455830 - 0.026477 =5.429353 (sec)$
+        \begin{equation*}
+            \text{Throughput} = \frac{\text{[Amount of data transmitted] = 164091 (\text{bytes})}}{\text{[Time incurred]} = 5.429353 (sec)} = 30,222.938\ \text{Bytes}/sec
+        \end{equation*}
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     %     \hspace{15mm}  

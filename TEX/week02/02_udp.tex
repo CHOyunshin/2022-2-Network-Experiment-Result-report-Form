@@ -14,7 +14,25 @@
         \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 2-2
         \item By consulting the displayed information in Wireshark’s this packet packet content field for ,determine the length (in bytes) of each of the UDP header fields.\\[0.2mm]
-        \soln
+        \soln The header length of UDP is that $\text{Length} - \text{UDP payload} : 58 - 50 = 8$.\\
+        As we can see in figure the 4 fields of header has the same length. Therefore each of 4 header fields is 2 bytes long.
+        \begin{figure}[h!]
+        \centering
+        \subfloat[ ]{
+            \includegraphics[width=0.48\textwidth] {image/week02/2-2-1.png}
+        }\hspace{2mm}
+        \subfloat[]{
+            \includegraphics[width=0.48\textwidth] {image/week02/2-2-2.png}
+        }
+        \hfill
+        \subfloat[ ]{
+            \includegraphics[width=0.48\textwidth] {image/week02/2-2-3.png}
+        }\hspace{2mm}
+        \subfloat[]{
+            \includegraphics[width=0.48\textwidth] {image/week02/2-2-4.png}
+        }
+		\caption{\footnotesize Problem 2-2's screenshot : }
+        \end{figure}
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     %     \hspace{15mm}  
@@ -23,19 +41,21 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 2-3
+\clearpage
         \item The value in the Length field is the length of what? this answer\\[0.2mm]
-        \soln
+        \soln Length’ is the length of the UDP header plus the UDP data. We can verify this from the packet below.  
+        $\text{Total length} = \text{header} + \text{data} = 8 + 50 = 58 \text{(bytes)}$
     %     \vspace{-4mm}  
-    %     \begin{figure}[!h]\centering
-    %     \hspace{15mm}  
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
-    % 		\caption{\footnotesize Problem 2-3's screenshot : }
-    % 		\vspace{-10pt}
-    %     \end{figure}
+        \begin{figure}[!h]\centering
+        \hspace{15mm}  
+    		\includegraphics[width=.85\textwidth]{image/week02/2-3-1.png}
+    		\caption{\footnotesize Problem 2-3's screenshot : }
+    		\vspace{-10pt}
+        \end{figure}
 % \newpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 2-4
         \item What is the maximum number of bytes that c\\[0.2mm]
-        \soln
+        \soln UDP header’s length field is 2 bytes (16 bit) long, so UDP’s maximum length is $2^{16} - 1 = 65535$ bytes. Since UDP header is 8 bytes long, UDP payload’s maximum length is $65535 - 8 = 65537$ bytes .
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     %     \hspace{15mm}  
@@ -45,7 +65,7 @@
     %     \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 2-5
         \item What is the largest possible source port number?\\[0.2mm]
-        \soln
+        \soln UDP header’s source port field is 2 bytes (16 bit) long, so the largest possible source port number is $2^{16} - 1 = 65535$.
     % \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     %     \hspace{15mm}  
@@ -57,13 +77,13 @@
         \item What is the protocol number for UDP? 
         Give your answer in both hex decimal notation. 
         To answer this question, you’ll need to loo adecimal and k into the field of the IP datagram containing this UDP segment.\\[0.2mm]
-        \soln
+        \soln hexadecimal notaion : 11  /  decimal notation : 17
     %     \vspace{-4mm}  
-    %     \begin{figure}[!h]\centering
-    %     \hspace{15mm}  
-    % 		\includegraphics[width=.85\textwidth]{image/week02/ }
-    % 		\caption{\footnotesize Problem 2-4's screenshot : }
-    % 		\vspace{-10pt}
-    %     \end{figure}
+        \begin{figure}[!h]\centering
+        \hspace{15mm}  
+    		\includegraphics[width=.85\textwidth]{image/week02/2-6-1}
+    		\caption{\footnotesize Problem 2-6's screenshot : }
+    		\vspace{-10pt}
+        \end{figure}
     \end{enumerate}
 \newpage
