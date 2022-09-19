@@ -17,7 +17,7 @@
         \end{figure}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-4
         \item What is the sequence number of the SYNACK segment sent by gaia.cs.umass.edu to the client computer in reply to the SYN? What is the value of the Acknowledgement field in the SYNACK segment? How did gaia.cs.umass.edu determine that value? What is it in the segment that identifies the segment as a SYNACK segment?\\[0.2mm]
-        \soln The sequence number of the SYNACK segment is 0. \\\
+        \soln The sequence number of the SYNACK segment is 0. 
         Acknowledgement field is the value of sequence number plus 1, 1.\\
         The message contains the information of this segment is the SYN,ACK segment as marked figure below.
     %     \vspace{-4mm}  
@@ -32,8 +32,8 @@
         \soln The sequence number of the TCP segment containing the HTTP POST command is 164041.
     %     \vspace{-4mm}  
         \begin{figure}[!h]\centering
-        \hspace{15mm}
-    		\includegraphics[width=.8\textwidth]{image/week02/1-5-1}
+        \hspace{10mm}
+    		\includegraphics[width=.75\textwidth]{image/week02/1-5-1}
     		\caption{\footnotesize Problem 1-5's screenshot : Packet - HTTP POST’s TCP Header}
     		\vspace{-10pt}
         \end{figure}
@@ -48,9 +48,10 @@
         The first six segements are No. 4,5,7,8,10,11. And those of sequence number are 1, 566, 2026, 3486, 4946, 6406.\\
         \vspace{-4mm}  
         \begin{figure}[!h]\centering
-        \hspace{15mm}
-    		\includegraphics[width=.8\textwidth]{image/week02/1-6-1.png}
-    		\caption{\footnotesize Problem 1-6-1's screenshot : }
+        \hspace{10mm}
+    		\includegraphics[width=.75\textwidth]{image/week02/1-6-1.png}
+    		\caption{\footnotesize Problem 1-6-1's screenshot : Packet - HTTP POST’s TCP Header with 122 of
+    		reassembled segments's sequence}
     		\vspace{-10pt}
         \end{figure}    
         
@@ -67,6 +68,7 @@
         Segment 5 & 0.077405 & 0.217299 & 0.139890 \\ \hline
         Segment 6 & 0.078157 & 0.267802 & 0.189640 \\ \hline
         \end{tabular}
+        \caption{The calculated value of RTT with the first six segments}
         \end{table}
 \clearpage
         The estimated RTT is calculated by given equation.\\
@@ -111,18 +113,18 @@
         Since we can find out that the first six ACK’s window size grows up to 20440 at ACK No.16 , and that means the maximum had not been reached in given trace. There was no throrrled because of the lack of receiver buffer space.
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-9
         \item Are there any retransmitted segments in the trace file? What did you check for (in the trace) in order to answer this question?\\[0.2mm]
-        \soln
+        \soln From the Sequnce-Time Plot we can figure out that the Sequnce number arrived enumerating by time, just steady increase so that there were no retransmitted segments.
     %     \vspace{-4mm}  
         \begin{figure}[!h]\centering
         \hspace{15mm}  
-    		\includegraphics[width=.8\textwidth]{image/week02/1-9-1.png}
+    		\includegraphics[width=.75\textwidth]{image/week02/1-9-1.png}
     		\caption{\footnotesize Problem 1-9's screenshot : }
     		\vspace{-10pt}
         \end{figure}
 \clearpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-10
         \item How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment.\\[0.2mm]
-        \soln
+        \soln As we know that the ACK number is that the client puts is  the sequence number of the next byte the client expecting from the receiver. That it is 
     %     \vspace{-4mm}  
     %     \begin{figure}[!h]\centering
     %     \hspace{15mm}  
@@ -130,6 +132,27 @@
     % 		\caption{\footnotesize Problem 1-10's screenshot : }
     % 		\vspace{-10pt}
     %     \end{figure}
+    \begin{table}[!h]\centering
+        \hspace{10mm}
+        \begin{tabular}{|l|c|c|}
+        \hline
+         & \multicolumn{1}{l|}{ACK number} & \multicolumn{1}{l|}{acknowledged data (bytes)} \\
+         \hline
+        ACK 1 & 566 & 566 \\ 
+        \hline
+        ACK 2 & 2026 & 1460 \\ 
+        \hline
+        ACK 3 & 3486 & 1460 \\ 
+        \hline
+        ACK 4 & 4946 & 1460 \\ 
+        \hline
+        ACK 5 & 6406 & 1460 \\ 
+        \hline
+        ACK 6 & 7866 & 1460 \\ 
+        \hline
+        \end{tabular}
+        \caption{The first six ACKS and their acknowledged sequenxw number \& acknowleded data}
+        \end{table}
 % \newpage
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Problem 1-11
         \item What is the throughput for the TCP connection? Explain how you calculated this value.\\[0.2mm]
@@ -142,4 +165,3 @@
     % 		\vspace{-10pt}
     %     \end{figure}
     \end{enumerate}
-\newpage
