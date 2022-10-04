@@ -50,8 +50,8 @@
     \csname the#1\endcsname\quad
   \fi}
 % define \prefix@section
-\newcommand\prefix@section{Experiment \thesection\ : }
-\newcommand\prefix@subsection{Topic \thesubsection\ :\ }
+\newcommand\prefix@section{Topic  \thesection\ : }
+\newcommand\prefix@subsection{Experiment \thesubsection\ :\ }
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \let\realItem\item
@@ -65,11 +65,12 @@
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차
-\newcommand{\numnum}{3}
+\newcommand{\numnum}{4}
 % 실험 부제목
 % \newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
-\newcommand{\subtitle}{USPR(1) : Introduction, Labview, Spectogram}
+% \newcommand{\subtitle}{USPR(1) : Introduction, Labview, Spectogram}
+\newcommand{\subtitle}{USPR(2) : Active Sensing}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -136,14 +137,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 03 ~ 09.28
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week03}{01-visualization}
-\import{./TEX/week03}{02-tx}
-\import{./TEX/week03}{03-other-txs}
+% \import{./TEX/week03}{01-visualization}
+% \import{./TEX/week03}{02-tx}
+% \import{./TEX/week03}{03-other-txs}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 04 ~ 10.05
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \import{./TEX/week04}{01_}
+\import{./TEX/week04}{01-spectrogram}
 % \newpage
 % \import{./TEX/week04}{02_}
 % \newpage
