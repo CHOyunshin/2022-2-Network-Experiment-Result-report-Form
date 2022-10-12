@@ -50,8 +50,8 @@
     \csname the#1\endcsname\quad
   \fi}
 % define \prefix@section
-\newcommand\prefix@section{Topic  \thesection\ : }
-\newcommand\prefix@subsection{Experiment \thesubsection\ :\ }
+\newcommand\prefix@section{Experiment  \thesection\ : }
+\newcommand\prefix@subsection{ \thesubsection\ :\ }
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \let\realItem\item
@@ -65,12 +65,13 @@
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차
-\newcommand{\numnum}{4}
+\newcommand{\numnum}{05}
 % 실험 부제목
 % \newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
 % \newcommand{\subtitle}{USPR(1) : Introduction, Labview, Spectogram}
-\newcommand{\subtitle}{USPR(2) : Active Sensing}
+% \newcommand{\subtitle}{USPR(2) : Active Sensing}
+\newcommand{\subtitle}{USPR(3) : CNN Classifier}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -89,7 +90,7 @@
 \pagestyle{fancy}
 \fancyhf{}
     \rhead{\small 2조 2016142096 조윤신, 2017142043 김재민}
-    \lhead{\textsc{Result Report Week\numnum\ \subtitle}}
+    \lhead{\textsc{Result Report Week\ \numnum\ \subtitle}}
 \cfoot{\thepage}
 \renewcommand\headrulewidth{0.3mm}
 %\renewcommand\footrulewidth{0.3mm}
@@ -144,8 +145,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 04 ~ 10.05
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week04}{00_notice}
-\import{./TEX/week04}{01-spectrogram}
+% \import{./TEX/week04}{00_notice}
+% \import{./TEX/week04}{01-spectrogram}
 % \newpage
 % \import{./TEX/week04}{02_}
 % \newpage
@@ -154,28 +155,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 05 ~ 10.12
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \import{./TEX/week05}{01_}
-% \newpage
-% \import{./TEX/week05}{02_}
-% \newpage
-% \import{./TEX/week05}{03_}
+% \import{./TEX/week05}{00_notice}
+\import{./TEX/week05}{01}
+\import{./TEX/week05}{02}
+\import{./TEX/week05}{03}
+\import{./TEX/week05}{04_01}
+% \import{./TEX/week05}{04_02}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 06 ~ 10.19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \import{./TEX/week06}{01_}
-% \newpage
 % \import{./TEX/week06}{02_}
-% \newpage
 % \import{./TEX/week06}{03_}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 07 ~ 10.26
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \import{./TEX/week07}{01_}
-% \newpage
 % \import{./TEX/week07}{02_}
-% \newpage
 % \import{./TEX/week07}{03_}
 %-------------------------------------------------------------------------
 \end{document}
