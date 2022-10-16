@@ -27,7 +27,7 @@ In this network simulation expeiment employing the use of SDN with POX controlle
 The Simulation scenario consists of a single OpenFlow Switches (s1) connected to three hosts (h1, h2, h3).\\
 \vspace{-4mm}
 \begin{figure}[!h]\centering 
-	\includegraphics[width=.6\textwidth]{image/week06/0-1.png}
+	\includegraphics[width=.55\textwidth]{image/week06/0-1.png}
 	\caption{\footnotesize 
 	Simulation Scenario of topology used in week 06 experiment}
 	\vspace{-10pt}
@@ -63,10 +63,11 @@ The figure below is the terminal output after we execute the mininet CLI code in
 \subsubsection*{mininet python API}
 By writting complete mininet scripts in python, it can be esaily cusomized the mn command line tool using —custom options. That all options command in CLI like ‘—topo’, defined as member of dictionary’s keys. 
 So as we can use the simple polomorphism of class that implemented in mininet API to build a custom scenario scripts.
+
 The python scripts below just same as the given mininet CLI command.
 \begin{listing}[h!]
 \inputminted[framerule = 1pt,framesep = 2mm , frame = lines, fontsize=\scriptsize]{python}{./code/week06/basic_topo.py}
-\caption{\footnotesize 1 switch and 3 host consturction with mac option that setting the simple IP address automatically}
+\caption{\footnotesize basic\_topo.py, implement basic topology with 1 switch and 3 host }
 \end{listing}
 \clearpage
 The figure below is the terminal output after we execute the custom python topology code in bash terminal.\\
