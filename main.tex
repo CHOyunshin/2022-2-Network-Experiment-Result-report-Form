@@ -1,12 +1,11 @@
 %페이지 세팅
-\documentclass[10pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
 \setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
 \textwidth 6.5in
 \textheight 9.in
 \oddsidemargin 0in
 \headheight 0in
-
 \usepackage{amsmath}
 \usepackage{tcolorbox}
 \usepackage{amssymb}
@@ -27,6 +26,7 @@
 \usepackage{indentfirst}
 \usepackage{hyperref}
 
+
 \usepackage{enumitem}
 \newlist{enumerateoptional}{enumerate}{1}
 \setlist[enumerateoptional]{
@@ -40,6 +40,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sectioning Sytle Change
 \renewcommand{\thesubsection}{\thesection-\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesection-\arabic{subsection}-\arabic{subsubsection}}
 % \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 % Customize Section Style
 % we use \prefix@<level> only if it is defined
@@ -51,7 +52,8 @@
   \fi}
 % define \prefix@section
 \newcommand\prefix@section{Experiment  \thesection\ : }
-\newcommand\prefix@subsection{ \thesubsection\ :\ }
+% \newcommand\prefix@subsection{ \thesubsection\ \ }
+% \newcommand\prefix@subsubsection{\quad \thesubsubsection\ \ }
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \let\realItem\item
@@ -61,17 +63,23 @@
   \refstepcounter{enumerateoptionali}% increment the counter
   \realItem[\bfseries#1~\theenumerateoptionali)]%
 }
+% WEEK 06 파이썬 코드 의 listing 을 위해서 수정해주는 이름 부분 
+% \usepackage{listings}
+% \renewcommand{\lstlistingname}{mininet python API custom code}
+% \renewcommand{\figcaption}{\footnotesize \textbf{mininet API} python custom code}
+\renewcommand{\listingscaption}{\footnotesize \textbf{mininet API} python code}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차
-\newcommand{\numnum}{05}
+\newcommand{\numnum}{06}
 % 실험 부제목
 % \newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
 % \newcommand{\subtitle}{USPR(1) : Introduction, Labview, Spectogram}
 % \newcommand{\subtitle}{USPR(2) : Active Sensing}
-\newcommand{\subtitle}{USPR(3) : CNN Classifier}
+% \newcommand{\subtitle}{USPR(3) : CNN Classifier}
+\newcommand{\subtitle}{mininet(1) : SDN - based switch and hub}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -156,18 +164,19 @@
                         % For Week 05 ~ 10.12
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \import{./TEX/week05}{00_notice}
-\import{./TEX/week05}{01}
-\import{./TEX/week05}{02}
-\import{./TEX/week05}{03}
-\import{./TEX/week05}{04_01}
+% \import{./TEX/week05}{01}
+% \import{./TEX/week05}{02}
+% \import{./TEX/week05}{03}
+% \import{./TEX/week05}{04_01}
 % \import{./TEX/week05}{04_02}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 06 ~ 10.19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \import{./TEX/week06}{01_}
-% \import{./TEX/week06}{02_}
-% \import{./TEX/week06}{03_}
+\import{./TEX/week06}{00}
+\import{./TEX/week06}{01}
+\import{./TEX/week06}{02}
+\import{./TEX/week06}{03}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 07 ~ 10.26
