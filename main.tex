@@ -1,7 +1,9 @@
 %페이지 세팅
-\documentclass[11pt,a4paper]{article}
+% 한국어 Setting의 경우 10 pt 이용해주자. 또한 줄간격인 line spread 도 1.15로 설정 
+\documentclass[10.5pt,a4paper]{article}
 \setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
 \setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
+\linespread{1.2}
 \textwidth 6.5in
 \textheight 9.in
 \oddsidemargin 0in
@@ -67,19 +69,19 @@
 % \usepackage{listings}
 % \renewcommand{\lstlistingname}{mininet python API custom code}
 % \renewcommand{\figcaption}{\footnotesize \textbf{mininet API} python custom code}
-\renewcommand{\listingscaption}{\footnotesize \textbf{mininet API} python code}
+\renewcommand{\listingscaption}{\footnotesize \textbf{reference code}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차
-\newcommand{\numnum}{06}
+\newcommand{\numnum}{08}
 % 실험 부제목
 % \newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
 % \newcommand{\subtitle}{USPR(1) : Introduction, Labview, Spectogram}
 % \newcommand{\subtitle}{USPR(2) : Active Sensing}
 % \newcommand{\subtitle}{USPR(3) : CNN Classifier}
-\newcommand{\subtitle}{mininet (1) : sdn-based switch and hub}
+\newcommand{\subtitle}{mininet (2) : sdn-based Routing}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -171,18 +173,20 @@
 % \import{./TEX/week05}{04_02}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                        % For Week 06 ~ 10.19
+                        % For Week 06 ~ 10.26 (중간고사 일정 변경)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week06}{00}
-\import{./TEX/week06}{01}
-\import{./TEX/week06}{02}
-\import{./TEX/week06}{03}
+% \import{./TEX/week06}{00}
+% \import{./TEX/week06}{01}
+% \import{./TEX/week06}{02}
+% \import{./TEX/week06}{03}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                        % For Week 07 ~ 10.26
+                        % For Week 08 ~ 11.02
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \import{./TEX/week07}{01_}
-% \import{./TEX/week07}{02_}
-% \import{./TEX/week07}{03_}
+\import{./TEX/week08}{01}
+\import{./TEX/week08}{02}
+\import{./TEX/week08}{03}
+\import{./TEX/week08}{04}
+\import{./TEX/week08}{05}
 %-------------------------------------------------------------------------
 \end{document}
