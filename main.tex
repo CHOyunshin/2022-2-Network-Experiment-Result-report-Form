@@ -1,6 +1,6 @@
 %페이지 세팅
 % 한국어 Setting의 경우 10 pt 이용해주자. 또한 줄간격인 line spread 도 1.15로 설정 
-\documentclass[10.5pt,a4paper]{article}
+\documentclass[9.5pt,a4paper]{article}
 \setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
 \setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
 \linespread{1.2}
@@ -41,8 +41,8 @@
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sectioning Sytle Change
-\renewcommand{\thesubsection}{\thesection-\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\thesection-\arabic{subsection}-\arabic{subsubsection}}
+\renewcommand{\thesubsection}{\thesection. \arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesection. \arabic{subsection}. \arabic{subsubsection}}
 % \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 % Customize Section Style
 % we use \prefix@<level> only if it is defined
@@ -53,7 +53,8 @@
     \csname the#1\endcsname\quad
   \fi}
 % define \prefix@section
-\newcommand\prefix@section{Experiment  \thesection\ : }
+% 11 / 14 실험 제목 생략을 위해서 잠시 수정해줌 
+\newcommand\prefix@section{Experiment  \thesection}
 % \newcommand\prefix@subsection{ \thesubsection\ \ }
 % \newcommand\prefix@subsubsection{\quad \thesubsubsection\ \ }
 \makeatother
@@ -69,13 +70,13 @@
 % \usepackage{listings}
 % \renewcommand{\lstlistingname}{mininet python API custom code}
 % \renewcommand{\figcaption}{\footnotesize \textbf{mininet API} python custom code}
-\renewcommand{\listingscaption}{\footnotesize \textbf{reference code}}
+\renewcommand{\listingscaption}{\footnotesize \textbf{OMNet++ Source Code}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차
-\newcommand{\numnum}{09}
+\newcommand{\numnum}{10}
 % 실험 부제목
 % \newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
@@ -83,7 +84,7 @@
 % \newcommand{\subtitle}{USPR(2) : Active Sensing}
 % \newcommand{\subtitle}{USPR(3) : CNN Classifier}
 % \newcommand{\subtitle}{mininet (2) : sdn-based Routing}
-\newcommand{\subtitle}{Socket Programming}
+\newcommand{\subtitle}{OMNet++ Simulator Basic}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -119,7 +120,7 @@
 \end{flushright}
     \begin{center}\vspace{-1.5cm}
         \textbf{\huge  Result Report Week \numnum}\\ 
-        \vspace{0.6mm}
+        \vspace{1.8mm}
         {\large \subtitle}\\           
     \end{center}
 \vspace{-5mm}
@@ -190,10 +191,18 @@
 % \import{./TEX/week08}{03}
 % \import{./TEX/week08}{04}
 % \import{./TEX/week08}{05}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week09}{01}
-\import{./TEX/week09}{02}
-\import{./TEX/week09}{03}
-
+%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        % For Week 09 ~ 11.09
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \import{./TEX/week09}{01}
+% \import{./TEX/week09}{02}
+% \import{./TEX/week09}{03}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        % For Week 10 ~ 11.16
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\import{./TEX/week10}{01}
+\import{./TEX/week10}{02}
+\import{./TEX/week10}{03}
 %-------------------------------------------------------------------------
 \end{document}
