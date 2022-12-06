@@ -1,0 +1,52 @@
+\vspace{-3mm}
+\section{}
+%%------------------------------------------------------------------------------------------
+%                                   Cose Reference
+%%------------------------------------------------------------------------------------------
+\vspace{-4mm}
+\subsection*{CODE}
+\vspace{-3mm}
+Experiment 3에서는 routing을 하는 3개의 host를 추가한다.  추가하는 host에서 IPv4 static routing 을 통해서 Host A 에서 Host B 로 packet이 전송될 수 있도록해준다. Host R1 R2 R3 를 추가해주는 코드로, 기존의  에서 extends를 이용하여   를 설정해 주었고, initial  file에서 IPv4 forward routing의 코드를 추가해 준다.
+    \vspace{-3mm}
+\subsubsection*{Experiment03.ini}
+    \vspace{-2mm}
+    \begin{listing}[h!]
+    \inputminted[framerule = 1pt,framesep = 2mm , frame = lines, fontsize=\footnotesize ]{c}{./code/week12/Experiment_03/ini.cpp}
+    \vspace{-3mm}
+    \caption{\footnotesize Expeirment 03's ini file, add forward routing}
+    \end{listing}
+    \vspace{-6mm}
+\subsubsection*{Network.ned}
+    \vspace{-2mm}
+    \begin{listing}[h!]
+    \inputminted[framerule = 1pt,framesep = 2mm , frame = lines, fontsize=\footnotesize ]{c}{./code/week12/Experiment_03/Network03.cpp}
+    \vspace{-3mm}
+    \caption{\footnotesize Expeirment 03's network file, add three of routing host}
+    \end{listing}
+    \vspace{-6mm} 
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%------------------------------------------------------------------------------------------
+%           simulation results -> you tube 링크 + 스크린샷 2장 + 내용에 대한 설명
+%%------------------------------------------------------------------------------------------
+\subsection*{SIMULATION RESULTS}
+    Experiment 3에서는 routing을 하는 3개의 host를 추가한다. 이때 routing에 의미가 있기위해 Host A와 Host B의 유효 거리를 500 m 에서 250m 로 줄여주어 직접적인 전송이 되지 않도록 변경해 주었다. 
+    simulation 전체의 영상은 아래 링크를 클릭하여 확인할 수 있다.     
+    \vspace{-10mm}
+        \begin{center}
+            \item \href{https://www.youtube.com/watch?v=WlI24BkZjFs&ab_channel=anamnesis}
+        	{Youtube link of Week12 Experiment 03 Simulation Results Screenshot Video}
+        \end{center}
+    \vspace{-6mm}
+    % 사진 1 2개는 넣어 주자
+        
+\vspace{-3mm}
+    \subsubsection*{Physical Layer Modelling}
+    \vspace{-2mm}
+    ini 에서 가능한 무선 통신 연결거리를 250m, 1Mbps의 속도로 데이터가 전송이되고, ned 에서 Host A 와 Host B의 간격을 450m 로 설정해주어 직접 통신이 불가능하고 Host R1의 routing 을 통해서 전송이 되도록 구성해 주었다. 
+    \subsubsection*{Simulation Scenario}
+    \vspace{-2mm}
+    Experiment 2 에서의 Host A 와 Host B 사이에서 직접 무선연결에서 유효 통신거리를 250 m로 줄여줌으로서 새로 추가해준 Host R1을 통한 정적 라우팅을 확인한다. 이는 pre report 에서 다룬 hidden node problem 에 해당되는 네트워크 시나리오 임을 알 수 있다. 
+    업로드 한 영상은 전체 네트워크에서의 네트워크의 흐름과 host b 내부에서 어떻게 packet을 받는지의 동작을 캡처했다. 
+    전체 네트워크에서 host A에서 host B로 패킷을 전송하지만 이는 링크에서 폐기되는 유효한 부분이 아니다. 이때의 routing 의 동작은 sequence log의 info 에서 확인할 수 있는것과 같이 정적 라우팅 테이블에 따라서 진행됨을 확인할 수 있다. 
+    Routing 과정에서 router역할을 하는 host들은 half parent 이므로 동시에 송수신이 불가능하기때문에 결과적으로 host a에서 전송한 udp 프레임의 절반만이 host b로 전송되는 일종의 서로를 인지 못한 두 호스트 사이에서의 송수신이 충돌해 효율이 감소하는 hidden node problem이 야기되는 결과 또한 확인이 가능하다.

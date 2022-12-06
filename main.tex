@@ -1,6 +1,6 @@
 %페이지 세팅
 % 한국어 Setting의 경우 10 pt 이용해주자. 또한 줄간격인 line spread 도 1.15로 설정 
-\documentclass[9.5pt,a4paper]{article}
+\documentclass[9.2pt,a4paper]{article}
 \setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
 \setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
 \linespread{1.2}
@@ -28,6 +28,7 @@
 \usepackage{indentfirst}
 \usepackage{hyperref}
 
+\setlength{\columnsep}{5mm}
 
 \usepackage{enumitem}
 \newlist{enumerateoptional}{enumerate}{1}
@@ -41,7 +42,7 @@
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sectioning Sytle Change
-\renewcommand{\thesubsection}{\thesection. \arabic{subsection}}
+\renewcommand{\thesubsection}{Experiment \thesection-\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesection. \arabic{subsection}. \arabic{subsubsection}}
 % \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 % Customize Section Style
@@ -55,7 +56,7 @@
 % define \prefix@section
 % 11 / 14 실험 제목 생략을 위해서 잠시 수정해줌 
 \newcommand\prefix@section{Experiment  \thesection}
-% \newcommand\prefix@subsection{ \thesubsection\ \ }
+% \newcommand\prefix@subsection{Experiment \thesection-\thesubsection}
 % \newcommand\prefix@subsubsection{\quad \thesubsubsection\ \ }
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,7 +77,7 @@
     % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 작성하는 주차
-\newcommand{\numnum}{11}
+\newcommand{\numnum}{13}
 % 실험 부제목
 % \newcommand{\subtitle}{wireshark(1) : Getting started HTTP DNS}
 % \newcommand{\subtitle}{wireshark(2) : TCP UDP IP protocols}
@@ -85,7 +86,8 @@
 % \newcommand{\subtitle}{USPR(3) : CNN Classifier}
 % \newcommand{\subtitle}{mininet (2) : sdn-based Routing}
 % \newcommand{\subtitle}{OMNet++ Simulator Basic}
-\newcommand{\subtitle}{Mobile Communication and Cellular Network}
+% \newcommand{\subtitle}{Medium Access Control}
+\newcommand{\subtitle}{V2X Communication: VANET Tutorial}
 %-------------------------------------------------------------------------
 %--> 떠다니는 객체 사용하는 부분 
 \usepackage{wrapfig}
@@ -210,16 +212,21 @@
                         % For Week 11 ~ 11.23 -> 조윤신 
 % notion Link : https://www.notion.so/Week-11-7773a1116c864b7baaafebd13b574259
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\import{./TEX/week11}{01}
-\import{./TEX/week11}{02}
+% \import{./TEX/week11}{01}
+% \import{./TEX/week11}{02}
 % \import{./TEX/week11}{03}
 %-------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         % For Week 12 ~ 11.30 -> 김재민 
                 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \import{./TEX/week12}{01}
-% \import{./TEX/week12}{02}
-% \import{./TEX/week12}{03}
+% \input{TEX/week12/0101}
+% \input{TEX/week12/0102}
+% \input{TEX/week12/02}
+% \input{TEX/week12/03}
+% \input{TEX/week12/04}
+% \input{TEX/week12/05}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\import{./TEX/week13}{01}
 %-------------------------------------------------------------------------
 \end{document}
